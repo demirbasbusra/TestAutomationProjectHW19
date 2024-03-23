@@ -1,3 +1,4 @@
+@functional
 Feature: Open Elements Page And Press Click Me Button
 
   Background:

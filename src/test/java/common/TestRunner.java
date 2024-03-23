@@ -11,8 +11,10 @@ import io.cucumber.testng.CucumberOptions;
                 "summary",
                 "html:build/cucumber-reports/cucumber-pretty",
                 "json:build/cucumber-reports/CucumberTestReport.json",
-                "rerun:build/cucumber-reports/rerun.txt"
-        }
+                "rerun:build/cucumber-reports/rerun.txt",
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7jvm"
+        },
+        tags = "@functional"
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 }

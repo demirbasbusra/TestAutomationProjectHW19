@@ -1,3 +1,4 @@
+@functional
 Feature: Add a person and edit this person on WebTables page
 
   Background:

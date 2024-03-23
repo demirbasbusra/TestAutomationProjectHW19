@@ -5,8 +5,9 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
-import static org.testng.AssertJUnit.assertEquals;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 
 public class WebTablesStepDefinitions {
 
@@ -18,11 +19,15 @@ public class WebTablesStepDefinitions {
         pageManager.webTablesPage.open();
     }
 
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Bu senaryoda Butona tıklanır.")
     @When("I click ADD button")
     public void ıClickADDButton() {
         pageManager.webTablesPage.addButton.click();
     }
 
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Bu senaryoda yeni bir kişi eklenir.")
     @And("I add new person")
     public void ıAddNewPerson() {
         pageManager.webTablesPage.firstName.sendKeys("Büşra");
@@ -34,6 +39,8 @@ public class WebTablesStepDefinitions {
         pageManager.webTablesPage.submit.click();
     }
 
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Bu senaryoda eklenen kişi güncellenir.")
     @And("I edited the person which I added before")
     public void ıEditedThePersonWhichIAddedBefore() {
         pageManager.webTablesPage.editSymbol.click();
